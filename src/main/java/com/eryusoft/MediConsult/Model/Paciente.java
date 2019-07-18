@@ -2,14 +2,18 @@ package com.eryusoft.MediConsult.Model;
 
 import java.util.Date;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
 public class Paciente 
 {
 	@Id
-	private int id;
+	@GeneratedValue(strategy = GenerationType.SEQUENCE)
+	@Column(name = "identificacion", updatable = false, nullable = false)
 	private String identificacion;
 	private String nombresApellidos;
 	private Date fechaNacimiento;
@@ -18,13 +22,6 @@ public class Paciente
 	private String telefono;
 	private String email;
 	
-	public int getId() {
-		return id;
-	}
-	
-	public void setId(int id) {
-		this.id = id;
-	}
 	
 	public String getIdentificacion() {
 		return identificacion;
