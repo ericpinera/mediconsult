@@ -16,7 +16,7 @@ public class Paciente
 	@Column(name = "identificacion", updatable = false, nullable = false)
 	private String identificacion;
 	private String nombresApellidos;
-	private Date fechaNacimiento;
+	private String fechaNacimiento;
 	private String sexo;
 	private String direccion;
 	private String telefono;
@@ -39,11 +39,11 @@ public class Paciente
 		this.nombresApellidos = nombresApellidos;
 	}
 	
-	public Date getFechaNacimiento() {
+	public String getFechaNacimiento() {
 		return fechaNacimiento;
 	}
 	
-	public void setFechaNacimiento(Date fechaNacimiento) {
+	public void setFechaNacimiento(String fechaNacimiento) {
 		this.fechaNacimiento = fechaNacimiento;
 	}
 	
